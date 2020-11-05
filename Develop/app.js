@@ -1,3 +1,8 @@
-const currentDay = moment().format('MMMM Do YYYY, h a');
+const currentDay = moment().format('MMMM Do YYYY');
 
-document.querySelector("#currentDay").textContent = currentDay
+$("#currentDay").textContent = currentDay
+
+$("form").on("submit", function (e) {
+  e.preventDefault()
+  
+})
