@@ -2,7 +2,7 @@ $(document).ready(function () {
   const currentTime = moment().format('MMMM Do YYYY')
   $("#currentTime").text(currentTime)
 
-  const times = [21, 22, 23]
+  const times = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
   times.forEach(time => {
     const timeCheck = window.localStorage.getItem(time)
@@ -31,10 +31,8 @@ $(document).ready(function () {
     
   $("form").on("submit", function (e) {
     e.preventDefault()
-    var time = e.target.querySelector("input").getAttribute("id")
-    var toDo = e.target.querySelector("input").value
+    const time = e.target.querySelector("input").getAttribute("id")
+    const toDo = e.target.querySelector("input").value
     window.localStorage.setItem(time, toDo)
-  //   console.log(e.target.querySelector("input").getAttribute("id"))
-  //   console.log(e.target.querySelector("input").value)
   })
 })
